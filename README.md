@@ -47,10 +47,20 @@ const addOrder = (obj, order) => {
 }
 ```
 
-**Se debe tener en cuenta que no todas las funciones pueden ser puras. Sin embargo, se recomienda favorecerlas sobre otras opciones**
+**Se debe tener en cuenta que no todas las funciones pueden ser puras. Sin embargo, se recomienda favorecerlas sobre otras opciones.**
 
-### Programación funcional
+### ¿Qué es una Closure en JavaScript?
 
-### ¿Qué es una Closure?
+Para definir realmente que es un closure en JavaScript, veamos las siguientes definiciones:
+
+_Una clausura o closure es una función que guarda referencias del estado adyacente (ámbito léxico). En otras palabras, una clausura permite acceder al ámbito de una función exterior desde una función interior. - [_MDN Web Docs_](https://developer.mozilla.org/es/docs/Web/JavaScript/Closures)_
+
+_Un closure es la combinación de una función agrupada (encerrada) con referencias a su estado circundante (el entorno léxico). En otras palabras, un closure le da acceso al alcance de una función externa desde una función interna. En JavaScript, los closure se crean cada vez que se crea una función, en el momento de la creación de la función. - [_Eric Elliott_](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36)_
+
+Closure es un comportamiento de funciones y solo de funciones. [_You Don't Know JS_](https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/scope-closures/ch7.md)
+
+Las closure puede ser un concepto que usemos a diario a la hora de programar, sin saber realmente que lo estamos usando. Veamos el siguiente ejemplo:
 
 ### Composición de funciones
+
+### Programación funcional

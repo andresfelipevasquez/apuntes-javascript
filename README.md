@@ -61,6 +61,19 @@ Closure es un comportamiento de funciones y solo de funciones. [_You Don't Know 
 
 Las closure puede ser un concepto que usemos a diario a la hora de programar, sin saber realmente que lo estamos usando. Veamos el siguiente ejemplo:
 
+```javascript
+const hello = (name) => {
+    const hi = 'Hi';
+    const sayHello = () => {
+        console.log(`${hi} ${name}`);
+    }
+    sayHello();
+}
+hello('Peter');
+```
+
+Dentro de la función _hello()_ se crea una variable llamada _hi_. Como las funciones internas tienen acceso a las variables de las funciones externas, la función _sayHello()_ puede acceder a la variable _hi_. Lo descrito anteriormente se conoce como **_ámbito léxico_**, el cual se basa en el lugar donde la variable fue creada para determinar dónde estará disponible.
+
 ### Composición de funciones
 
 ### Programación funcional

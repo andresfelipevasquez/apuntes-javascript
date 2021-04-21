@@ -74,6 +74,22 @@ hello('Peter');
 
 Dentro de la función _hello()_ se crea una variable llamada _hi_. Como las funciones internas tienen acceso a las variables de las funciones externas, la función _sayHello()_ puede acceder a la variable _hi_. Lo descrito anteriormente se conoce como **_ámbito léxico_**, el cual se basa en el lugar donde la variable fue creada para determinar dónde estará disponible.
 
+Ahora consideremos el siguiente ejemplo:
+
+```javascript
+const hello = (name) => {
+    const hi = 'Hi';
+    const sayHello = () => {
+        console.log(`${hi} ${name}`);
+    }
+    return sayHello;
+}
+myFunction = hello('Peter');
+myFunction();
+```
+
+El resultado de este ejemplo es igual al del código anterior. Pero ¿cómo hace javaScript para mantener las referencias a las variables internas si ya se ejecutó la función _hello_? La respuesta es que **myFunction** se ha convertido en un _closure_, es decir, que se está combinando la función y el entorno en que fue creada dicha función. De esta forma, myFunction aún puede seguir teniendo acceso a la variable _hi_, o a lo que se conoce como ámbito léxico.
+
 ### Composición de funciones
 
 ### Programación funcional
